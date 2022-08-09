@@ -9,7 +9,7 @@
 
 
 // // task_2
-// let capitalizeFirstLetter = str => str[0].toUpperCase() + str.slice(1);
+// let capitalizeFirstLetter = str => `${str[0].toUpperCase()}${str.slice(1)}`;
 // console.log(capitalizeFirstLetter("hello")); 
 // console.log(capitalizeFirstLetter("HELLO")); 
 // console.log(capitalizeFirstLetter("hElLo")); 
@@ -42,12 +42,15 @@
 //   }
 // ]
 
-// students.forEach(student => {
-//   let sumOfMarks = student.marks.reduce((sum, current) => sum + current, 0);
-//   let averageMark = sumOfMarks / student.marks.length;
-//   student.averageMark = averageMark;
-// });
-// console.log(students)
+// let getAverageMark = (students) => {
+//   students.forEach((student) => {
+//     let sumOfMarks = student.marks.reduce((sum, current) => sum + current, 0);
+//     let averageMark = sumOfMarks / student.marks.length;
+//     student.averageMark = averageMark;
+//   });
+//   return students;
+// };
+// console.log(getAverageMark(students));
 
 
 // // task_5
@@ -64,11 +67,11 @@
 //   { make: 'Ford', model: 'Explorer', type: 'SUV', price: 31660 }
 // ];
 
-// let getVehicles = vehicles.filter((item) => item.type.toUpperCase() === "SUV");
-// let getAveragePrice = (getVehicles) =>
-//   getVehicles.reduce((sum, current) => sum + current.price, 0) /
-//   getVehicles.length;
-// console.log(getAveragePrice(getVehicles));
+// let newVehicles = vehicles.filter((item) => item.type.toUpperCase() === "SUV");
+// let getAveragePrice = (newVehicles) =>
+//   newVehicles.reduce((sum, current) => sum + current.price, 0) /
+//   newVehicles.length;
+// console.log(getAveragePrice(newVehicles));
 
 
 // // task_6
