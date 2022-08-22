@@ -1,7 +1,7 @@
 "use strict";
 
 
-let isWeekend = (date) => {
+function isWeekend(date) {
   let day = new Date(date).getDay();
   return day === 6 || day === 0;
 };
