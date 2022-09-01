@@ -3,5 +3,8 @@
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
-  .then((data) => console.log(data.filter((user) => user.company.name === "Johns Group")))
+  .then((data) => {
+    let user = data.find(({ company: { name } }) => name === "Johns Group");
+    return console.log(user);
+  })
   .catch((error) => console.error(error));
