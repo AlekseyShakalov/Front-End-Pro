@@ -24,9 +24,7 @@
 
 
 // // task_3
-// let isAfter = (firstDate, secondDate) => {
-//   return firstDate > secondDate;
-// }
+// let isAfter = (date, dateToCompare) => date > dateToCompare;
 
 // console.log(isAfter(new Date(1989, 6, 10), new Date(1987, 1, 11))); // true
 // console.log(isAfter(1648636135000, 1648549735000)); // true
