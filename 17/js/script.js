@@ -32,8 +32,10 @@ input.oninput = () => {
 let createList = (value) => {
   let li = document.createElement("li");
   let button = document.createElement("button");
+  let checkbox = document.createElement("input");
+  checkbox.setAttribute("type", "checkbox");
   button.innerHTML = "Delete";
-  li.append(value, button);
+  li.append(checkbox, value, button);
   return li;
 };
 
@@ -43,3 +45,13 @@ list.addEventListener("click", (event) => {
     event.target.closest("li").remove();
   }
 });
+
+list.onchange = (event) => {
+  let isChecked = event.target.nodeName === "INPUT";
+  if (isChecked) {
+    let li = event.target.closest("li");
+    li.classList.add("checked");
+    li.querySelector("input").setAttribute("disabled", "true");
+    li.querySelector("button").setAttribute("disabled", "true");
+  }
+};
