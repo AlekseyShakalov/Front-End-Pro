@@ -5,6 +5,10 @@ import Title from "./components/Title";
 function App() {
   const [isOpened, setOpened] = useState(false);
 
+  const handleClick = () => {
+    setOpened(true);
+  };
+
   if (isOpened) {
     return (
       <div>
@@ -13,10 +17,6 @@ function App() {
       </div>
     );
   }
-
-  const handleClick = () => {
-    setOpened(true);
-  };
 
   return <button onClick={handleClick}>Open title</button>;
 }
