@@ -32,21 +32,21 @@ const Users = () => {
           <th></th>
         </tr>
       </thead>
-      {users.map(({ id, firstName, lastName, email, phone }) => (
-        <tbody>
-          <tr>
-            <td key={firstName}>{firstName}</td>
-            <td key={lastName}>{lastName}</td>
-            <td key={email}>{email}</td>
-            <td key={phone}>{phone}</td>
+      <tbody>
+        {users.map(({ id, firstName, lastName, email, phone }) => (
+          <tr key={id}>
+            <td>{firstName}</td>
+            <td>{lastName}</td>
+            <td>{email}</td>
+            <td>{phone}</td>
             <td>
               <button type="button" onClick={handleShowMore(id)}>
                 Show more
               </button>
             </td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
     </table>
   );
 };
