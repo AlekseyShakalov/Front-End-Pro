@@ -4,17 +4,7 @@ import PropTypes from "prop-types";
 const StyledButtonBase = styled.button`
   display: block;
   height: ${(props) => (props.size === "small" ? "40px" : "48px")};
-  width: ${(props) => {
-    switch (props.size) {
-      case "large":
-        return "81px";
-      case "medium":
-        return "76px";
-      case "small":
-        return "68px";
-    }
-  }};
-  padding: ${(props) => (props.size === "small" ? "8px 16px" : "12px 20px")};
+  padding: ${(props) => (props.size === "small" ? "0px 16px" : "0px 20px")};
   margin: 10px;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -31,22 +21,25 @@ const StyledPrimaryButton = styled(StyledButtonBase)`
   }
 
   :disabled {
-    background: #cbd4e64d;
+    background: rgba(203, 212, 230, 0.3);
     color: #7c8db0;
+    border: 1px solid #7c8db0;
   }
 `;
 
 const StyledSecondaryButton = styled(StyledButtonBase)`
   background: white;
-  color: #7c8db0;
+  color: #605dec;
+  border: 1px solid #605dec;
 
   :hover {
     background: #e9e8fc;
   }
 
   :disabled {
-    background: #7c8db0;
+    background: white;
     color: #7c8db0;
+    border: 1px solid #7c8db0;
   }
 `;
 
