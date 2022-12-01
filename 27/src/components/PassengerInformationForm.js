@@ -61,11 +61,17 @@ const PassengerInformationForm = () => {
             </Grid>
 
             <Grid item xs={4}>
-              <TextField
-                id="outlined-basic"
-                label="Middle"
-                variant="outlined"
-                sx={{ width: 200 }}
+              <Controller
+                control={control}
+                name="middle"
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Middle"
+                    variant="outlined"
+                    sx={{ width: 200 }}
+                  />
+                )}
               />
             </Grid>
 
@@ -88,11 +94,17 @@ const PassengerInformationForm = () => {
             </Grid>
 
             <Grid item xs={4}>
-              <TextField
-                id="outlined-basic"
-                label="Suffix"
-                variant="outlined"
-                sx={{ width: 200 }}
+              <Controller
+                control={control}
+                name="suffix"
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Suffix"
+                    variant="outlined"
+                    sx={{ width: 200 }}
+                  />
+                )}
               />
             </Grid>
 
@@ -154,11 +166,17 @@ const PassengerInformationForm = () => {
             </Grid>
 
             <Grid item xs={6}>
-              <TextField
-                id="outlined-basic"
-                label="Redress number"
-                variant="outlined"
-                sx={{ width: 300 }}
+              <Controller
+                control={control}
+                name="redressNumber"
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    label="Redress number"
+                    variant="outlined"
+                    sx={{ width: 300 }}
+                  />
+                )}
               />
             </Grid>
 
