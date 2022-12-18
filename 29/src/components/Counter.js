@@ -1,12 +1,13 @@
 import { memo } from "react";
-import { Box } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
-import { Input } from "@chakra-ui/react";
+import { Box, IconButton, Input } from "@chakra-ui/react";
+import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
 import useCounter from "../hooks/useCounter";
 
+const initialValue = 1;
+
 const Counter = () => {
-  const { count, increment, decrement, setCount, initialValue } = useCounter();
+  const { count, increment, decrement, setCount } = useCounter(initialValue);
 
   const handleChange = ({ target: { value } }) => {
     if (value !== "" && value < initialValue) {
@@ -19,18 +20,19 @@ const Counter = () => {
   return (
     <>
       <Box display="flex">
-        <Button onClick={decrement} colorScheme="blue" disabled={count <= 1}>
-          -
-        </Button>
+        <IconButton
+          onClick={decrement}
+          disabled={count <= initialValue}
+          colorScheme="blue"
+          icon={<MinusIcon />}
+        />
         <Input
           value={count}
           onChange={handleChange}
           htmlSize={4}
           width="auto"
         />
-        <Button onClick={increment} colorScheme="blue">
-          +
-        </Button>
+        <IconButton onClick={increment} colorScheme="blue" icon={<AddIcon />} />
       </Box>
     </>
   );
