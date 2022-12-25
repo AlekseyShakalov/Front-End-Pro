@@ -1,7 +1,6 @@
 type TitleProps = {
   name: string;
-  type: string;
-  priority?: boolean;
+  type: "bold"  | "normal";
 };
 
 const Title = ({ name, type }: TitleProps) => {
